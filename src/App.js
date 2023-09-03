@@ -1,10 +1,12 @@
 
 import './App.css';
-
+import Data from './components/Data';
+import {useGobalContext} from "./components/context";
 function App() {
-  return (
-   <h1>bjjffd</h1>
-  );
+  return (<>
+<Data/>
+
+   </>);
 }
 
 export default App;
