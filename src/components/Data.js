@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useGlobalContext } from "./context";
+import Card from "./Card";
 const Data =()=>
 {
    const {products,skip,isLoading }= useGlobalContext();
@@ -13,17 +14,22 @@ const Data =()=>
         }
         return(
             <>
+           
              {products.map((product)=>{
-     return <h2 key ={product.id}>{product.id} {
-         product.title}</h2>
-  })}
-            </>
+                const {id,title,despcription,price ,discountPercentage,stock,rating,brand,category,thumdnail,images} = product;
+     return ( 
+        <Card key ={product.id}>
+     <div  >
+                <img  src={product.thumbnail} alt={product.name} />
+     <h2 >
+        {product.title}</h2>
+     
+         </div>
+         </Card>);
+  })}  
+          </>
         );
     
 }
 export default Data;
 
-// {products.map((product)=>{
-//     return <h2 key ={product.id}>{
-//         product.title}</h2>
-//  })}
