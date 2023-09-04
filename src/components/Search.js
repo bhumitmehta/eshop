@@ -1,13 +1,15 @@
 import React from 'react'
 import { useGlobalContext } from './context'
+import {FaSearch} from "react-icons/fa"
+import "./Search.css"
 const Search = () => {
-    const {useGlobalContext}=
+    // const {useGlobalContext}=
   return (
-    <><div>Search</div>
-    <form>
-        <input type='text' placeholder='Search'/>
-    </form>
-</>
+    <div className = "input_wrapper">
+    <FaSearch id = "search_icons" />
+        <input  placeholder='Search'/>
+  
+</div>
   )
 }
 
