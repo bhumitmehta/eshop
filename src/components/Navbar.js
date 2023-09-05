@@ -29,8 +29,6 @@ export default function Navbar() {
         <></>
         <Search/>
         <ul >
-          <li>Home</li>
-          <li>About</li> 
            <li> <Button onClick={handleButtonClick1} text={"Chart"} /></li>
         </ul>
 

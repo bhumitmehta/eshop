@@ -7,10 +7,10 @@ const AppContext = createContext();
 const initialState = {
   isLoading: true,
   skip: 0,
-  limit: 100,
+  limit: 30,
   total: 0,
   products: [],
-  searchQuery: "", 
+  searchQuery: "", // Add a searchQuery property
 };
 
 const AppProvider = ({ children }) => {
@@ -42,6 +42,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     const filteredProducts = state.products.filter((product) =>
+   
       product.title.toLowerCase().includes(state.searchQuery.toLowerCase())
     );
 
@@ -50,7 +51,6 @@ const AppProvider = ({ children }) => {
       payload: {
         products: filteredProducts,
         skip: state.skip,
-        limit: 100,
       },
     });
   }, [state.searchQuery]);

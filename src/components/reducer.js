@@ -17,10 +17,21 @@ const reducer = (state, action) => {
           ...state,
           searchQuery: action.payload,
         };
+      case "Set_Filtered_Products":
+        return {
+          ...state,
+          filteredProducts: action.payload,
+        };
+        // case "Re_Get_Data":
+        //   return  {
+        //         ...state,
+        //         products: action.payload.products,
+        //     };
       default:
         return state;
     }
   };
   
   export default reducer;
+  
   

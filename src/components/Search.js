@@ -1,23 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "./context";
 import { FaSearch } from "react-icons/fa";
 import "./Search.css";
 
 const Search = () => {
-  const { products } = useGlobalContext();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const { searchQuery, dispatch } = useGlobalContext();
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setSearchQuery(value);
+    dispatch({ type: "Set_Search_Query", payload: value });
+  };
 
-    // Filter products based on the search query
-    const filteredProducts = products.filter((product) =>
-      product.title.toLowerCase().includes(value.toLowerCase())
-    );
-
-    setFilteredProducts(filteredProducts);
+  const handleClear = () => {
+    // Clear the search query
+    dispatch({ type: "Set_Search_Query", payload: "" });
   };
 
   return (
@@ -28,10 +24,9 @@ const Search = () => {
         value={searchQuery}
         onChange={handleChange}
       />
+      <button onClick={handleClear}>X</button>
     </div>
   );
 };
 
 export default Search;
-
-

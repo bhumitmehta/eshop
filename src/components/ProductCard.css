@@ -2,6 +2,8 @@
 
 .product-card {
   border: 1px solid #c2c2c2;
+  display: grid;
+  grid-template-columns: 20% 20% 20%;
   margin: 20px;
   padding: 20px;
   display: flex;
@@ -21,6 +23,7 @@
 }
 
 .product-card img {
+  max-width: calc(50% - 40px);
   max-width: 100%; /* Adjusted to make the image responsive */
   max-height: 200px;
   margin-bottom: 10px;
