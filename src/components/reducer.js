@@ -1,19 +1,26 @@
-import React from "react";
-
-const reducer =(state,action)=>{
-    switch(action.type){
-        case"Get_loading":
-        return{
-            ...state,
-            isLoading : true,
+const reducer = (state, action) => {
+    switch (action.type) {
+      case "Get_loading":
+        return {
+          ...state,
+          isLoading: true,
         };
-        case "Get_Data":
-          return {  ...state,
-            isLoading : false,
-            products:action.payload.products,
-            skip : action.payload.skip,
-    };
+      case "Get_Data":
+        return {
+          ...state,
+          isLoading: false,
+          products: action.payload.products,
+          skip: action.payload.skip,
+        };
+      case "Set_Search_Query":
+        return {
+          ...state,
+          searchQuery: action.payload,
+        };
+      default:
+        return state;
     }
-    return state;
-}
-export default reducer;
+  };
+  
+  export default reducer;
+  

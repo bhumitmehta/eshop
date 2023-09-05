@@ -1,14 +1,16 @@
-import React, { useContext, useReducer, useEffect } from "react";
+import React, { createContext, useReducer, useContext, useEffect } from "react";
 import reducer from "./reducer";
-let API = "https://dummyjson.com/products?"; 
-const AppContext = React.createContext();
+
+const API = "https://dummyjson.com/products?";
+const AppContext = createContext();
 
 const initialState = {
   isLoading: true,
   skip: 0,
-  limit: 30,
+  limit: 100,
   total: 0,
   products: [],
+  searchQuery: "", 
 };
 
 const AppProvider = ({ children }) => {
@@ -16,8 +18,7 @@ const AppProvider = ({ children }) => {
 
   const fetchApiData = async (url) => {
     dispatch({
-        type:"Get_loading",
-        // isLoading:true,
+      type: "Get_loading",
     });
     try {
       const data = await fetch(url);
@@ -36,11 +37,26 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchApiData(`${API}skip=${state.skip=30}`); 
-  }, []);
+    fetchApiData(`${API}skip=${state.skip}`);
+  }, [state.skip]);
+
+  useEffect(() => {
+    const filteredProducts = state.products.filter((product) =>
+      product.title.toLowerCase().includes(state.searchQuery.toLowerCase())
+    );
+
+    dispatch({
+      type: "Get_Data",
+      payload: {
+        products: filteredProducts,
+        skip: state.skip,
+        limit: 100,
+      },
+    });
+  }, [state.searchQuery]);
 
   return (
-    <AppContext.Provider value={{ ...state }}>
+    <AppContext.Provider value={{ ...state, dispatch }}>
       {children}
     </AppContext.Provider>
   );
@@ -50,4 +66,4 @@ const useGlobalContext = () => {
   return useContext(AppContext);
 };
 
-export { AppContext, AppProvider, useGlobalContext }; // Corrected the export name
+export { AppProvider, useGlobalContext };

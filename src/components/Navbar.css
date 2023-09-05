@@ -1,0 +1,69 @@
+/* NavBar.css */
+.navbar {
+    background: linear-gradient(rgb(61, 116, 193), rgb(41, 94, 153)), #f8f9fa;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px;
+}
+
+.logo-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    object-fit: contain; /* Adjusted to "contain" for logos */
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    color: #333; /* Dark gray color */
+}
+
+.navbar ul {
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0 20px; /* Adjusted padding */
+    list-style: none; /* Corrected property name */
+}
+
+.navbar ul li {
+    padding: 10px 10px;
+    font-size: 1rem;
+    list-style-type: none;
+    color: #333; /* Dark gray color */
+    height: inherit;
+    transition: 0.3s linear;
+}
+
+.navbar ul li:hover,
+.navbar ul li.active a {
+    color: #007bff; /* Blue color on hover/active */
+    background-color: #f8f9fa; /* Light gray background on hover/active */
+    text-decoration: none;
+}
