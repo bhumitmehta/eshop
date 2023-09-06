@@ -27,3 +27,7 @@ input:focus {
     font-size: 1.5rem; 
     color: #007bff; 
 }
+button{
+    background-color: transparent;
+    border-color: transparent;
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useGlobalContext } from './context';
 import ProductCard from './ProductCard';
-
-function Data() {
+import "./Productcontainer.css"
+function Productcontainer() {
   const { products, isLoading } = useGlobalContext();
 
   if (isLoading) {
@@ -14,16 +14,13 @@ function Data() {
   }
 
   return (
-    <>
+    <div className='product-container-main'>
       {products.map((product) => (
-        <div className='product-container'>
         <ProductCard key={product.id} product={product} />
-
-        </div>
       ))}
-    </>
+    </div>
   );
 }
 
-export default Data;
+export default Productcontainer;
 

@@ -27,6 +27,32 @@ const reducer = (state, action) => {
         //         ...state,
         //         products: action.payload.products,
         //     };
+        case "Clear_Search_Query":
+      return {
+        ...state,
+        searchQuery: "",
+      };
+      case "Next_Page":
+        let currentPage = state.currentPage;
+        if (currentPage>4){
+         state.currentPage =1;
+        }
+        return {
+          ...state,
+          currentPage: state.currentPage+1,
+        };
+  
+      case "Prev_Page":
+        let currentPag = state.currentPage-1;
+        if (currentPag<=0){
+          state.currentPage=1;
+        }
+        return {
+          ...state,
+        
+          currentPage: state.currentPage - 1,
+        };
+
       default:
         return state;
     }

@@ -1,0 +1,8 @@
+.product-container-main{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Image_thumbnail{
+    min-width: 200px;
+    min-height: width 200px;
+}

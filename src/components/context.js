@@ -1,3 +1,5 @@
+// context.js
+
 import React, { createContext, useReducer, useContext, useEffect } from "react";
 import reducer from "./reducer";
 
@@ -10,7 +12,9 @@ const initialState = {
   limit: 30,
   total: 0,
   products: [],
-  searchQuery: "", // Add a searchQuery property
+  searchQuery: "",
+  clearSearch: "",
+  currentPage: 1, // Add currentPage property
 };
 
 const AppProvider = ({ children }) => {
@@ -37,12 +41,11 @@ const AppProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchApiData(`${API}skip=${state.skip}`);
-  }, [state.skip]);
+    fetchApiData(`${API}skip=${(state.currentPage - 1) * state.limit}`);
+  }, [state.currentPage]);
 
   useEffect(() => {
     const filteredProducts = state.products.filter((product) =>
-   
       product.title.toLowerCase().includes(state.searchQuery.toLowerCase())
     );
 
@@ -50,13 +53,26 @@ const AppProvider = ({ children }) => {
       type: "Get_Data",
       payload: {
         products: filteredProducts,
-        skip: state.skip,
+        skip: 0,
+        limit: 100,
       },
     });
   }, [state.searchQuery]);
 
+  const getNextPage = () => {
+    dispatch({
+      type: "Next_Page",
+    });
+  };
+
+  const getPrevPage = () => {
+    dispatch({
+      type: "Prev_Page",
+    });
+  };
+
   return (
-    <AppContext.Provider value={{ ...state, dispatch }}>
+    <AppContext.Provider value={{ ...state, dispatch, getNextPage, getPrevPage }}>
       {children}
     </AppContext.Provider>
   );

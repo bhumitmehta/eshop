@@ -29,7 +29,7 @@ export default function Navbar() {
         <></>
         <Search/>
         <ul >
-           <li> <Button onClick={handleButtonClick1} text={"Chart"} /></li>
+           <li> <Button onClick={handleButtonClick1} text={"Cart"} /></li>
         </ul>
 
       </div>

@@ -1,18 +1,25 @@
 
-import './App.css';
-import Data from './components/Data';
+// App.js
 
-//import {useGobalContext} from "./components/context";
+import React from 'react';
+import './App.css';
 
 import Navbar from './components/Navbar';
-// import Search from './components/Search';
-function App() {
-  return (<>
-  <Navbar/>
- 
-<Data/>
+import Pagination from './components/Pagination';
+import { AppProvider } from "./components/context";
+import Productcontainer from './components/Productcontainer';
 
-   </>);
+function App() {
+  return (
+    <AppProvider>
+      <Navbar />
+      <div className ="below-nav-bar">
+      <Productcontainer />
+      <Pagination />
+      </div>
+    </AppProvider>
+  );
 }
 
 export default App;
+
