@@ -15,6 +15,7 @@ const reducer = (state, action) => {
       case "Set_Search_Query":
         return {
           ...state,
+           limit:30,
           searchQuery: action.payload,
         };
       case "Set_Filtered_Products":

@@ -1,6 +1,7 @@
 // Pagination.js
 
 import React from "react";
+import "./Pagination.css";
 import { useGlobalContext } from "./context";
 import Button from "./Button";
 const Pagination = () => {
@@ -11,7 +12,7 @@ const Pagination = () => {
       <Button onClick={getPrevPage} disabled={currentPage === 1} text="Prev"/>
      
       <span>Page {currentPage}</span>
-      <Button onClick={getNextPage} disabled={currentPage === 4}text="Next" />
+      <Button onClick={getNextPage} disabled={currentPage === 4} text="Next" />
     </div>
   );
 };

@@ -5,11 +5,11 @@ import "./Search.css";
 
 const Search = () => {
   const { searchQuery, dispatch, clearSearch } = useGlobalContext();
-
+console.log.apply(searchQuery);
   const handleChange = (e) => {
     const value = e.target.value;
     dispatch({ type: "Set_Search_Query", payload: value });
-   
+    {console.log.apply(searchQuery)}
   };
   
   const handleClear = () => {
@@ -26,6 +26,7 @@ const Search = () => {
         value={searchQuery}
         onChange={handleChange}
       />
+     
       <button value ={clearSearch} onClick={handleClear}>X</button>
     </div>
   );

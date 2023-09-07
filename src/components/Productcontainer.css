@@ -1,8 +1,18 @@
 .product-container-main{
     display: flex;
     flex-wrap: wrap;
+    background:linear-gradient(rgb(255, 255, 255),rgb(248, 248, 248));
+    align-items: stretch;
 }
 .Image_thumbnail{
     min-width: 200px;
     min-height: width 200px;
 }
+@media (max-width: 1000px) {
+ 
+    .product-card {
+      /* max-width: 100%;  */
+      max-width: calc(50% - 40px);
+      flex-wrap: wrap;
+    }
+  }

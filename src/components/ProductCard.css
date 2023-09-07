@@ -3,28 +3,33 @@
 .product-card {
   border: 1px solid #c2c2c2;
   display: grid;
-
+  border-radius: 20px;
   margin: 20px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-  flex: 1; /* Ensure equal width for all cards in a row */
-  min-width:30%; /* Limit maximum width for two columns */
+ text-align: center;
+ 
+  background-color: #f2f2f2;
+  box-shadow: 0px 4px 8px rgba(41, 52, 247, 0.1);
+  transition: box-shadow 0.3s ease-out;
+  flex: 1; 
+  min-width:30%; 
   box-sizing: border-box;
 }
-
+.link{
+  font-style:none;
+  color: black;
+  text-decoration: none;
+}
 .product-card:hover {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .product-card img {
   max-width: calc(50% - 40px);
-  max-width: 100%; /* Adjusted to make the image responsive */
+  max-width: 100%; 
   max-height: 200px;
   margin-bottom: 10px;
 }
@@ -37,27 +42,52 @@
 
 .product-price {
   font-size: 1rem;
-  color: #007bff; /* Blue color for price */
+  color: #ff0000;
   margin: 5px 0;
 }
-
+.button-container{
+  gap:3px;
+  display: flex;
+}
 .add-to-cart-button {
-  background-color: #007bff; /* Blue color for button */
-  color: #fff; /* White text color */
+  background-color: #007bff; 
+  color: #fff; 
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
 }
-
-.add-to-cart-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.buy-button{
+  background-color: #0abc66; 
+  color: #fff; 
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
 }
-
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}
+.Img_thumbnail{
+  min-width: 90%;
+max-width: 90%;
+  max-height: 50%;
+}
 @media (max-width: 768px) {
-  /* Stack cards vertically on screens smaller than 768px */
+ 
   .product-card {
-    max-width: 100%; /* Full width for single column */
+    max-width: 100%; 
   }
+}
+.product-discount{
+  color: #007bff;
+  margin: 1%;
+}
+.product-save{
+  color: #008645;
+  margin : 5%;
 }

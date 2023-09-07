@@ -6,16 +6,10 @@ import Search from './Search';
 //import {Link} from 'react-scroll'
 import Button from './Button';
 import { AppProvider } from "./context";
+import icons8 from "./Images/icons8-cart-50.png"
 
 export default function Navbar() {
-  const handleButtonClick = () => {
-    const link = document.createElement('a');
-    link.href = "";
-    link.download = 'downloaded-file.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+
   const handleButtonClick1=()=>{
     
   }
@@ -29,10 +23,13 @@ export default function Navbar() {
         <></>
         <Search/>
         <ul >
-           <li> <Button onClick={handleButtonClick1} text={"Cart"} /></li>
+           <li className='button-cart'> <ImageComponent imageUrl={icons8} alt ="fjjf" hieght={30} width={30}/><button onClick={handleButtonClick1}  >Cart
+           </button></li>
         </ul>
 
-      </div>
+
+        </div>
+
     </nav>
   );
 }

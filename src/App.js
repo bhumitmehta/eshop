@@ -15,8 +15,10 @@ function App() {
       <Navbar />
       <div className ="below-nav-bar">
       <Productcontainer />
+    
       <Pagination />
       </div>
+      
     </AppProvider>
   );
 }

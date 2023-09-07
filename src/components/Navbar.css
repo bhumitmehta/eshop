@@ -1,6 +1,6 @@
 /* NavBar.css */
 .navbar {
-    background: linear-gradient(rgb(61, 116, 193), rgb(41, 94, 153)), #f8f9fa;
+    background: linear-gradient(rgb(255, 237, 237), rgb(233, 243, 255)), #f8f9fa;
     padding: 10px 0;
     position: fixed;
     width: 100%;
@@ -32,12 +32,12 @@
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-left: 10px;
     margin-right: 10px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:   'Lucida Sans', Arial, sans-serif;
     font-weight: 400;
-    color: #333; /* Dark gray color */
+    color: #5c0000; /* Dark gray color */
 }
 
 .navbar ul {
@@ -66,4 +66,12 @@
     color: #007bff; /* Blue color on hover/active */
     background-color: #f8f9fa; /* Light gray background on hover/active */
     text-decoration: none;
+}
+.button-cart{
+    display: flex;
+    flex-wrap:wrap ;
+    background-color: #fdd4d4;
+    border-width: 2px;
+    border-radius: 100px;
+    border-color: #007bff;
 }
