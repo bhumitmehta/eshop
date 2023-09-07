@@ -51,9 +51,12 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/c
 
 ### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)<img width="1453" alt="Screenshot 2023-09-07 at 10 00 05 PM" src="https://github.com/bhumitmehta/Bhumit-GDSC-WebDev_Task/assets/111174676/f99c5df1-d1a6-4525-94f1-4e1a38356295">
 
-### Making a Progressive Web App
+
+### Making a Progressive Web App<img width="1421" alt="Screenshot 2023-09-07 at 10 00 28 PM" src="https://github.com/bhumitmehta/Bhumit-GDSC-WebDev_Task/assets/111174676/4cec3e1b-a041-40<img width="1453" alt="Screenshot 2023-09-07 at 10 00 05 PM" src="https://github.com/bhumitmehta/Bhumit-GDSC-WebDev_Task/assets/111174676/87d7ed68-bf33-4400-8a6a-b2632e8120f2">
+98-b336-71f4b62604a6">
+
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
