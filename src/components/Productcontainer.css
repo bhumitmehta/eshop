@@ -12,7 +12,7 @@
  
     .product-card {
       /* max-width: 100%;  */
-      max-width: calc(50% - 40px);
+      max-width: 1250px;
       flex-wrap: wrap;
     }
   }

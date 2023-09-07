@@ -1,7 +1,8 @@
 import React from 'react';
 import { useGlobalContext } from './context';
 import ProductCard from './ProductCard';
-import "./Productcontainer.css"
+import "./Productcontainer.css";
+import Pagination from './Pagination';
 function Productcontainer() {
   const { products, isLoading } = useGlobalContext();
 
@@ -13,12 +14,15 @@ function Productcontainer() {
     );
   }
 
-  return (
+  return (<>
     <div className='product-container-main'>
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
+    
+        <Pagination />
     </div>
+    </>
   );
 }
 
