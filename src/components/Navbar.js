@@ -25,8 +25,12 @@ export default function Navbar() {
         <ul >
            <li className='button-cart'> <ImageComponent imageUrl={icons8} alt ="fjjf" hieght={30} width={30}/><button onClick={handleButtonClick1}  >Cart
            </button></li>
-        </ul>
-
+       
+        <li className='button-cart'> <ImageComponent imageUrl={icons8} alt ="fjjf" hieght={30} width={30}/><button onClick={handleButtonClick1}  > Register
+           </button></li>
+           <li className='button-cart'> <ImageComponent imageUrl={icons8} alt ="fjjf" hieght={30} width={30}/><button onClick={handleButtonClick1}  > Sign In
+           </button></li>
+           </ul>
 
         </div>
 

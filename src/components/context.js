@@ -9,7 +9,7 @@ const AppContext = createContext();
 const initialState = {
   isLoading: true,
   skip: 0,
-  limit: 30,
+  limit: 20,
   total: 0,
   products: [],
   searchQuery: "",
@@ -45,18 +45,35 @@ const AppProvider = ({ children }) => {
   }, [state.currentPage]);
 
   useEffect(() => {
-    const filteredProducts = state.products.filter((product) =>
+    const filteredProducts1 = state.products.filter((product) =>
       product.title.toLowerCase().includes(state.searchQuery.toLowerCase())
+     
     );
-
     dispatch({
       type: "Get_Data",
       payload: {
-        products: filteredProducts,
+        products: filteredProducts1,
         skip: 0,
         limit: 100,
       },
     });
+  }, [state.searchQuery]);
+
+  useEffect(()=>{
+       const filteredProducts1 = state.products.filter((product) =>
+      product.category.toLowerCase().includes(state.searchQuery.toLowerCase())
+     
+    );
+  
+    dispatch({
+      type: "Get_Data",
+      payload: {
+        products: filteredProducts1,
+        limit: 100,
+        skip: 0,
+        limit: 100,
+      },
+  });
   }, [state.searchQuery]);
 
   const getNextPage = () => {

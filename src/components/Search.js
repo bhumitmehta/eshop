@@ -8,7 +8,7 @@ const Search = () => {
 console.log.apply(searchQuery);
   const handleChange = (e) => {
     const value = e.target.value;
-    dispatch({ type: "Set_Search_Query", payload: value });
+    dispatch({ type: "Set_Search_Query", payload: value ,limit: 100, });
     {console.log.apply(searchQuery)}
   };
   
