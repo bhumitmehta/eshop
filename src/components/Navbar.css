@@ -1,80 +1,85 @@
-/* NavBar.css */
-.navbar {
-    background: linear-gradient(rgb(255, 237, 237), rgb(233, 243, 255)), #f8f9fa;
-    padding: 10px 0;
-     position: absolute;
-   
-    width: 100%;
-    height: 60px;
-    top: 0;
-    z-index: 999;
-    overflow: hidden;
-   
-}
+/* Navbar.css */
 
-.container {
-   
+.navbar {
+    background: #232f3e; /* Amazon's navbar background color */
+    color: #fff; /* Text color */
+    padding: 10px 0;
+    position: fixed; /* Fixed navbar at the top */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
     padding: 0 20px;
-}
-
-.logo-container {
-    width: 30%;
+  }
+  
+  .logo-container {
+    width: auto; /* Adjusted width for responsiveness */
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-.navbar-logo img {
-    object-fit: contain; /* Adjusted to "contain" for logos */
-}
-
-.logo-text {
+  }
+  
+  .navbar-logo img {
+    max-height: 40px; /* Adjusted max-height for responsiveness */
+    object-fit: contain;
+  }
+  
+  .logo-text {
     font-size: 1.7rem;
     margin-left: 10px;
     margin-right: 10px;
-    font-family:   'Lucida Sans', Arial, sans-serif;
-    font-weight: 400;
-    color: #5c0000; /* Dark gray color */
-}
-
-.navbar ul {
-    position: relative;
+    font-family: 'Amazon Ember', 'Arial', sans-serif; /* Amazon's font family */
+    font-weight: 700; /* Amazon's font weight */
+    color: #fff;
+  }
+  
+  .navbar ul {
     display: flex;
     height: 100%;
-    width: 50%;
+    width: auto; /* Adjusted width for responsiveness */
     align-items: center;
     gap: 25px;
     margin: 0;
-    padding: 0 20px; /* Adjusted padding */
-    list-style: none; /* Corrected property name */
-}
-
-.navbar ul li {
+    list-style: none;
+  }
+  
+  .navbar ul li {
     padding: 10px 10px;
     font-size: 1rem;
     list-style-type: none;
-    color: #333; /* Dark gray color */
+    color: #fff;
     height: inherit;
     transition: 0.3s linear;
-}
-
-.navbar ul li:hover,
-.navbar ul li.active a {
-    color: #007bff; /* Blue color on hover/active */
-    background-color: #f8f9fa; /* Light gray background on hover/active */
-    text-decoration: none;
-}
-.button-cart{
+  }
+  
+  .navbar ul li:hover,
+  .navbar ul li.active a {
+    color: #ffd700; /* Amazon's yellow color on hover/active */
+  }
+  
+  .button-cart {
     display: flex;
-    flex-wrap:wrap ;
-    background-color: #fdd4d4;
+    flex-wrap: wrap;
+    background-color: #fff; /* Background color for the cart button */
     border-width: 2px;
-    border-radius: 100px;
-    border-color: #007bff;
-}
+    border-radius: 4px; /* Adjusted border radius */
+    border-color: #ffa500; /* Amazon's orange border color */
+    color: #ffa500; /* Amazon's orange text color */
+    padding: 10px 15px; /* Adjusted padding for the cart button */
+    cursor: pointer;
+  }
+  
+  .button-cart img {
+    max-height: 20px; /* Adjusted max-height for responsiveness */
+    margin-right: 5px; /* Added some spacing between icon and text */
+  }
+  

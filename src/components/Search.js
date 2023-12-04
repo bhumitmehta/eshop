@@ -1,21 +1,31 @@
+
 import React from "react";
 import { useGlobalContext } from "./context";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaTimes } from "react-icons/fa";
 import "./Search.css";
 
 const Search = () => {
-  const { searchQuery, dispatch, clearSearch } = useGlobalContext();
-console.log.apply(searchQuery);
+  const { products, dispatch } = useGlobalContext();
+
   const handleChange = (e) => {
-    const value = e.target.value;
-    dispatch({ type: "Set_Search_Query", payload: value ,limit: 100, });
-    {console.log.apply(searchQuery)}
+    const value = e.target.value.toLowerCase();
+
+    // Use the original products when the search query is empty
+    const filteredProducts = value
+      ? products.filter((product) =>
+          product.name && product.name.toLowerCase().includes(value)
+        )
+      : null;
+
+    dispatch({
+      type: "Set_Search_Query",
+      payload: value,
+      filteredProducts: filteredProducts,
+    });
   };
-  
+
   const handleClear = () => {
-    // Clear the search query
     dispatch({ type: "Clear_Search_Query" });
-    window.location.reload();
   };
 
   return (
@@ -23,11 +33,14 @@ console.log.apply(searchQuery);
       <FaSearch id="search_icons" />
       <input
         placeholder="Search"
-        value={searchQuery}
+        value={products.searchQuery}
         onChange={handleChange}
       />
-     
-      <button value ={clearSearch} onClick={handleClear}>X</button>
+      {products.searchQuery && (
+        <button onClick={handleClear}>
+          <FaTimes />
+        </button>
+      )}
     </div>
   );
 };
