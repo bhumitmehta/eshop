@@ -3,7 +3,8 @@ import React, { useState , useContext} from "react";
 import {auth,googleAuthProvider } from "./firebase";
 import { useNavigate } from "react-router-dom";
 import {createUserWithEmailAndPassword,signInWithPopup,signInWithEmailAndPassword} from "firebase/auth";
-import './SignUpForm.css'
+
+import './SignUpForm.css';
  import { AuthContext } from "./Context/AuthContext";
 const SignUpForm = () => {
 
@@ -59,9 +60,6 @@ const SignUpForm = () => {
 
   return (
     <div className="signup-form">
-    
-
- 
       <form onSubmit={handleSubmit} className="signupform">
       <h2>Sign up</h2>
         <div className="form-group">
