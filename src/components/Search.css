@@ -1,34 +1,41 @@
 .input_wrapper {
-    background-color: #f8f9fa;
+    background-color: #fff; /* Changed to white background */
     width: 50%;
-    max-width: 300px; 
+    max-width: 300px;
     padding: 10px;
     border-radius: 20px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
+  }
   
-}
-
-input {
+  input {
     background-color: transparent;
     border: none;
     height: 100%;
     width: 100%;
     margin-left: 10px;
     font-size: 1.2rem;
-    color: #333; 
-}
-
-input:focus {
+    color: #333;
+  }
+  
+  input:focus {
     outline: none;
-}
-
-#search_icons {
-    font-size: 1.5rem; 
-    color: #007bff; 
-}
-button{
+  }
+  
+  #search_icons {
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  button {
     background-color: transparent;
-    border-color: transparent;
-}
+    border: none;
+    cursor: pointer;
+    color: #999; /* Close button color */
+  }
+  
+  button:hover {
+    color: #333; /* Change color on hover */
+  }
+  

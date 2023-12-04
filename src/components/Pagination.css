@@ -1,5 +1,43 @@
-.pagination{
-   padding-inline-start:30%; 
-    background-color: rgb(254, 254, 254);
+/* Pagination.css */
 
-}
+.pagination {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f8f8f8; /* Amazon's background color for pagination */
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%); /* Initially move it below the viewport */
+  }
+  
+  .pagination span {
+    font-size: 1rem;
+    margin: 0 10px;
+    color: #555; /* Dark gray color */
+  }
+  
+  .pagination button {
+    background-color: #ff9900; /* Amazon's orange button color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .pagination button:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+  }
+  
+  .pagination.visible {
+    transform: translateY(0); /* Move it to the visible position */
+  }
+  
+  /* You can add more styling based on your preferences */
+  
