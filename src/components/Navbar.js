@@ -12,7 +12,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const handleRegisterClick = () => {
-    navigate('/'); // Redirects to the register route
+    navigate('/signup'); // Redirects to the register route
   };
 
   const handleSignInClick = () => {

@@ -7,6 +7,7 @@ import Productcontainer from './components/Productcontainer';
 import { BrowserRouter as Router, Route, Routes,Navigate } from 'react-router-dom';
 import ProductPage from './components/Productpage';
 import { AuthContext } from './components/Context/AuthContext';
+// import Form from './components/form';
 function App() {
   const {currentUser} = useContext(AuthContext);
   
@@ -19,9 +20,11 @@ function App() {
         <Navbar />
         <div className="below-nav-bar">
           <Routes>
-            <Route path='signup' element={<SignUpForm/>}/>
+           
+            <Route path='/signup' element={<SignUpForm/>}/>
             <Route path="/" element={<Productcontainer />} />
             <Route path="/product/:id" element={<ProductPage />} />
+            {/* <Route path ="/form" element={<Form/>}/> */}
           </Routes>
         </div>
       </AppProvider>

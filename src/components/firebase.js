@@ -4,16 +4,17 @@ import 'firebase/compat/firestore';
 import { getAuth,GoogleAuthProvider } from "firebase/auth";
 
 
-
 const firebaseConfig = {
-  apiKey: "AIzaSyCIStjOY0O5ivtDqJ83AP_p3uXA15GAWd8",
-  authDomain: "todoreactproject-f3d1a.firebaseapp.com",
-  projectId: "todoreactproject-f3d1a",
-  storageBucket: "todoreactproject-f3d1a.appspot.com",
-  messagingSenderId: "448600716584",
-  appId: "1:448600716584:web:3c451086a900edea388c1d",
-  measurementId: "G-FZZLXFX8HD"
+  apiKey: "AIzaSyDM0C8pF7i5IiPENBAWeC4cpotpNADiQ2U",
+  authDomain: "eshop-30380.firebaseapp.com",
+  databaseURL: "https://eshop-30380-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "eshop-30380",
+  storageBucket: "eshop-30380.appspot.com",
+  messagingSenderId: "633305713663",
+  appId: "1:633305713663:web:2057e8b348d55be154b5ca",
+  measurementId: "G-SGKN62X1CX"
 };
+
 
 const firebaseApp = initializeApp(firebaseConfig);
 // const app = firebase.initializeApp(firebaseConfig);
